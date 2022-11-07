@@ -13,13 +13,21 @@ public class CustomerController {
     
     @GetMapping("/customers")
     public List<Customer> listar() {
-        Customer customer = new Customer();
-        customer.setId(1L);
-        customer.setName("João");
-        customer.setEmail("joao@algalog.com.br");
-        customer.setTelefone("47 98787-6767");
-        
-        return Arrays.asList(customer);
+
+        var firstCustomer = new Customer();
+        firstCustomer.setId(1L);
+        firstCustomer.setName("João");
+        firstCustomer.setEmail("joao@algalog.com.br");
+        firstCustomer.setPhoneNumber("4798787-6767");
+
+        var secondCustomer = new Customer();
+        secondCustomer.setId(2L);
+        secondCustomer.setName("Maria");
+        secondCustomer.setEmail("maria@algalog.com.br");
+        secondCustomer.setPhoneNumber("4798585-4545");  
+
+        return Arrays.asList(firstCustomer, secondCustomer);
+
     }
 
 }
